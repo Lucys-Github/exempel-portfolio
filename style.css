@@ -1,0 +1,196 @@
+/* Root, variables & classes */
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    --darkblue: #000050;
+    --yellow: #ff0;
+    --white: #fff;
+}
+
+.left-margin-25px {
+    margin-left: 25px;
+}
+
+.darkblue-text {
+    color: #000050;
+}
+
+/* Innehåll */
+/* 1. Yellow side decoration*/
+/* 2. Header */
+/* 3. Page layout flex container */
+/* 4. Image */
+/* 5. Main */
+/* 6. Footer */
+/* 7. Phone/ipad landscape mode media query */
+/* 8. Desktop media query */
+
+/*1. Yellow side decoration  */
+#gul {
+    position: absolute;
+    width: 25px;
+    background-color: var(--yellow);
+    height: 100vh;
+}
+
+/* 2. Header */
+header {
+    background-color: var(--darkblue);
+    height: 10vh;
+    display: flex;
+}
+
+/* Logo */
+h2 {
+    display: inline;
+    color: var(--yellow);
+    font-size: 3rem;
+    align-self: center;
+}
+
+/* Div for space between logo and nav bar */
+#logo-nav-spacer {
+    background-color: var(--darkblue);
+    flex-grow: 2;
+}
+
+nav {
+    margin-right: 15px;
+    display: inline;
+    flex-grow: 5;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+nav>a {
+    color: var(--white);
+    text-decoration-color: var(--yellow);
+    text-underline-offset: 0.3rem;
+}
+
+/*3. Page layout flex container */
+#img-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: auto;
+    height: 90vh;
+}
+
+/*4. Image */
+#hamster-bild {
+    background-color: blue;
+    flex-grow: 7;
+    background-image: url(bilder/hero-bilder/hamsterbild\ 100kB.jpg);
+    background-size: cover;
+}
+
+/* 5. main */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#h1-flex-container {
+    background-color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background-color: var(--white);
+    font-size: 3rem;
+}
+
+#link-flex-container {
+    background-color: var(--white);
+    flex-grow: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    background-color: var(--white);
+    list-style: none;
+    font-size: 2rem;
+}
+
+/* 6. Footer */
+footer {
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+
+/*7. phone/ipad landscape mode media query. */
+@media screen and (min-width: 600px) and (orientation:landscape) {
+    header {
+        height: 15vh;
+    }
+
+    nav {
+        font-size: 1.8rem;
+    }
+
+    #img-main-container {
+        flex-direction: row;
+        height: 85vh;
+    }
+
+    #hamster-bild {
+        background-size: cover;
+        background-position: left;
+    }
+
+    #h1-flex-container {
+        align-items: flex-end;
+        justify-content: left;
+        text-align: left;
+        margin-left: 25px;
+    }
+
+    #link-flex-container {
+        margin-left: 25px;
+        align-items: flex-start;
+        text-align: left;
+        justify-content: left;
+
+    }
+}
+
+/*8. Desktop media query */
+@media screen and (min-width: 980px) {
+    #hamster-bild {
+        flex-grow: 2;
+        background-image: url(bilder/hero-bilder/hamsterbild\ 380kB.jpg);
+        margin: 10vh;
+    }
+
+    #h1-flex-container {
+        margin-bottom: 50px;
+        margin-right: 25px;
+        text-align: center;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    #link-flex-container {
+        margin-right: 25px;
+        text-align: center;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+}
+
+/* All kod validerad */

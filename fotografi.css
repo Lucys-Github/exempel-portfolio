@@ -1,0 +1,80 @@
+/* Innehåll */
+/* 1. Root, variables & classes */
+/* 2. Header */
+/* 3. Footer */
+/* 4. photo gallery */
+
+/*1 Root, variables & classes*/
+*{
+overflow-x: hidden;
+--darkblue: #000050;
+--yellow: #ff0;
+--white: #fff;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+.left-margin-25px {
+margin-left: 25px;
+}
+
+.darkblue-text {
+color: #000050;
+}
+
+/*2. Header */
+header {
+background-color: var(--darkblue);
+height: 10vh;
+display: flex;
+}
+
+/* Logo */
+h2 {
+display: inline;
+color: var(--yellow);
+font-size: 3rem;
+align-self: center;
+}
+
+/* Div for space between logo and nav bar */
+#logo-nav-spacer {
+background-color: var(--darkblue);
+flex-grow: 2;
+}
+
+nav {
+margin-right: 15px;
+display: inline;
+flex-grow: 5;
+align-self: center;
+display: flex;
+justify-content: space-around;
+font-size: 1.5rem;
+}
+
+nav>a {
+color: var(--white);
+text-decoration-color: var(--yellow);
+text-underline-offset: 0.3rem;
+}
+
+/*3. Footer */
+footer {
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+/*4. Photo Gallery  */
+img{
+    width:600px;
+    height:500px;
+}
+
+@media screen and (orientation: portrait) {
+   img{ width:300px;
+    height:250px;}
+}
+
+/* All kod validerad i css */
